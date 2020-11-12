@@ -23,6 +23,9 @@ int main()
 	int a;
 	cout << "Podaj numer liczby z ciagu fibonacciego: ";
 	cin >> a;
-	cout<<fibo(a);
+	for (int i = 0; i < a; i++)
+	{
+		cout<<fibo(i)<<endl;
+	}
 	return 0;
 }
