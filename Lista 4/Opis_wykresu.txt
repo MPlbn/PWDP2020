@@ -1,0 +1,1 @@
+Wykres dotyczy mojego cudownego ciągu -> an = (n)^2!
