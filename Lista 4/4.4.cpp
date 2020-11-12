@@ -20,7 +20,7 @@ int nastepny()
 		}
 		else
 		{
-			cout << "Bledna odpowiedz, wprowadz poprawna(tak/nie): ";
+			cout << "\x1b[91mBledna odpowiedz\x1b[0m, wprowadz poprawna(tak/nie): ";
 		}
 	}
 
