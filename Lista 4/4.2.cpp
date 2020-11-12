@@ -20,7 +20,7 @@ float Oblicz_sred(int a)
 int main(void)
 {
 	ofstream plik;
-	plik.open("Wyniki.txt"); // W og�le nie powstaje plik.
+	plik.open("Wyniki.txt"); // W ogóle nie powstaje plik nie wiedzieć czemu.
 	int n = 10;
 	for (int i = 0; i < 100; i++)
 	{
