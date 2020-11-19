@@ -18,7 +18,7 @@ int show_map_p(string x[4][4])
 	return 0;
 }
 
-string placement(string x)
+string placement(string x[4][4])
 {
 	string pola[4][4] = { {"A1", "A2", "A3", "A4"}, {"B1", "B2", "B3", "B4"}, {"C1", "C2", "C3", "C4"}, {"D1", "D2", "D3", "D4"} };
 	string choice;
@@ -30,7 +30,7 @@ string placement(string x)
 		{
 			if (choice == pola[i][j])
 			{
-				x[i][j] = 'N';
+				x[i][j] = "N";
 			}
 			else
 			{
@@ -38,14 +38,13 @@ string placement(string x)
 			}
 		}
 	}
-	return x;
+	return x[4][4];
 }
 
 
 int main()
 {
 	string pusta_plansza[4][4] = { {"*", "*", "*", "*"}, {"*", "*", "*", "*"}, {"*", "*", "*", "*"}, {"*", "*", "*", "*"} };
-	string plansza_gracza[4][4] = pusta_plansza;
-	int podmianka[2] = placement(pusta_plansza);
+	string plansza_gracza[4][4] = {placement(pusta_plansza)};
 	show_map_p(plansza_gracza);
 }
