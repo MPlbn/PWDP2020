@@ -116,7 +116,7 @@ void show_stateofthegame(string (&x)[4][4], string (&y)[4][4], int statki)
 {
 	if (statki == 0)
 	{
-		cout << "Gratulacje! Wygra³eœ!";
+		cout << "Gratulacje! Wygrales!";
 		_exit(0);
 	}
 	else
@@ -138,10 +138,12 @@ int main()
 	placement_comp(pola, statki_przeciwnika);
     placement(plansza_gracza);
 	show_stateofthegame(plansza_gracza, plansza_komputera,statki_przeciwnika);
-	cout << "Oddaj strzal!\n";
-	shots_taken(plansza_komputera, pola, statki_przeciwnika);
-	shots_taken_comp(plansza_gracza);
-	show_stateofthegame(plansza_gracza, plansza_komputera, statki_przeciwnika);
+	for (;;)
+	{
+		shots_taken(plansza_komputera, pola, statki_przeciwnika);
+		shots_taken_comp(plansza_gracza);
+		show_stateofthegame(plansza_gracza, plansza_komputera, statki_przeciwnika);
+	}
 
     return 0;
 }
